@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0001FC">
+
+    <ImageView
+        android:id="@+id/image2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="230dp" />
+
+    <TextView
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/image2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textColor="@color/white"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="27sp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="@id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_email"
+        android:textColor="@color/white"
+        android:text="Email"
+        android:textSize="17sp"/>
+
+    <EditText
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/email"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:hint="Email"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_password"
+        android:textColor="@color/white"
+        android:text="Password"
+        android:textSize="17sp"/>
+
+    <EditText
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:background="@drawable/border"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:hint="Password"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textAllCaps="false"
+        android:layout_margin="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:id="@+id/btn"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Validate"
+        android:background="@drawable/shape"
+        android:textColor="#0001FC"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? "
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/textview2"
+        app:layout_constraintBottom_toBottomOf="@id/textview2"
+        android:id="@+id/textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:textSize="16.5sp"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

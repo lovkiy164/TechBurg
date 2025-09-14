@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textSize="36sp"
+        android:text="Search"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"/>
+
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:id="@+id/fr"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/searchview">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/container_til_search"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@android:color/transparent"
+            app:hintEnabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_search"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:drawableStart="@mipmap/search"
+                android:drawablePadding="40dp"
+                android:dropDownWidth="340dp"
+                android:dropDownHeight="240dp"
+                android:completionThreshold="1"
+                android:dropDownHorizontalOffset="16dp"
+                android:textColor="#1F53E4"
+                android:textColorHint="#1F53E4"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:hint="What are you looking for?"
+                app:iconifiedByDefault="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="55dp"
+            android:background="#A7A9BE"/>
+
+        <ProgressBar
+            android:id="@+id/pb_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="140dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:indeterminateTint="#1F53E4"/>
+
+    </FrameLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/fr"
+        android:id="@+id/last_viewed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="30dp"
+        android:textSize="26sp"
+        android:text="Last viewed"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/last_viewed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_search"
+        tools:itemCount="2"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"
+        android:id="@+id/lastest_search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:textSize="26sp"
+        android:text="Lastest search"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="@id/lastest_search"
+        app:layout_constraintBottom_toBottomOf="@id/lastest_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/clean"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:text="Clean all history"
+        android:textColor="#A7A9BE"
+        android:focusable="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/lastest_search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_history"
+        tools:itemCount="5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

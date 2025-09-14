@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp">
+
+    <ImageButton
+        android:id="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textSize="36sp"
+        android:background="@color/white"
+        android:src="@mipmap/back"/>
+
+    <TextView
+        android:id="@+id/sales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="30sp"
+        android:text="Laptops"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"/>
+
+    <GridLayout
+        app:layout_constraintTop_toBottomOf="@id/sales"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/sales"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_product"/>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

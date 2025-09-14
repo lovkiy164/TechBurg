@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment1"
+        android:icon="@mipmap/home2"
+        android:title="Fragment 1" />
+
+    <item
+        android:id="@+id/fragment2"
+        android:icon="@mipmap/search2"
+        android:title="Fragment 2" />
+
+    <item
+        android:id="@+id/fragment3"
+        android:icon="@mipmap/cart2"
+        android:title="Fragment 3"/>
+
+    <item
+        android:id="@+id/fragment4"
+        android:icon="@mipmap/user2"
+        android:title="Fragment 4"/>
+
+</menu>

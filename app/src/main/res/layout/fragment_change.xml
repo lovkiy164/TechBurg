@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="19dp"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textSize="36sp"
+        android:background="@color/white"
+        android:src="@mipmap/back"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@id/back"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Email"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/text"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:id="@+id/actual_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Actual email adress"/>
+
+    <TextView
+        android:paddingStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/actual_text"
+        app:layout_constraintTop_toBottomOf="@id/actual_text"
+        android:id="@+id/actual"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0001FC"
+        android:text="email@gmail.com"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/actual"
+        app:layout_constraintTop_toBottomOf="@id/actual"
+        android:id="@+id/new_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="New email adress"/>
+
+    <EditText
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/new_text"
+        app:layout_constraintTop_toBottomOf="@id/new_text"
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/border2"
+        android:textColor="#0001FC"
+        android:hint="Email"/>
+
+    <TextView
+        android:layout_marginTop="75dp"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/new_text"
+        app:layout_constraintTop_toBottomOf="@id/new_text"
+        android:id="@+id/confirm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Confirm email adress"/>
+
+    <EditText
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/confirm_text"
+        app:layout_constraintTop_toBottomOf="@id/confirm_text"
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/border2"
+        android:textColor="#0001FC"
+        android:hint="Email"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@id/edit2"
+        android:background="@drawable/button"
+        android:text="Confirm changes"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edit2"
+        android:layout_marginTop="60dp"
+        android:textSize="20sp"
+        android:background="@drawable/selected"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Changes confirmed"
+        android:textColor="@color/white"
+        android:id="@+id/btn_inactive"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/btn"
+        app:layout_constraintEnd_toEndOf="@id/btn"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="16sp"
+        android:textColor="#c90000"
+        android:visibility="invisible"
+        android:text="Text fields dont match"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

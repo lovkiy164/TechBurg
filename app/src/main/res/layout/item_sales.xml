@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="230dp"
+    android:layout_marginEnd="20dp">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:padding="3dp"
+            android:background="@drawable/sale"
+            android:layout_gravity="left"
+            android:id="@+id/sale"
+            android:textSize="12dp"
+            android:textColor="#1F53E4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" -50% "/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_gravity="center"
+            android:layout_width="135dp"
+            android:layout_height="155dp"
+            android:src="@mipmap/phone"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/category"
+            android:textSize="19dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#0A1034"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smartphones"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

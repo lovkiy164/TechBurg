@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_page"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.techburg.PageFragment1"
+        tools:layout="@layout/fragment_page_1">
+        <action
+            android:id="@+id/action_fragment1_to_fragment_sale"
+            app:destination="@id/fragment_sale" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment_product"
+            app:destination="@id/fragment_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_sale"
+        android:name="com.example.techburg.SaleFragment"
+        tools:layout="@layout/fragment_sale">
+        <action
+            android:id="@+id/action_fragment_sale_to_fragment1"
+            app:destination="@id/fragment1" />
+        <argument
+            android:name="category"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragment_sale_to_fragment_product"
+            app:destination="@id/fragment_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.techburg.PageFragment2"
+        tools:layout="@layout/fragment_page_2">
+        <action
+            android:id="@+id/action_fragment2_to_fragment_product"
+            app:destination="@id/fragment_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.example.techburg.PageFragment3"
+        tools:layout="@layout/fragment_page_3"/>
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.example.techburg.PageFragment4"
+        tools:layout="@layout/fragment_page_4">
+        <action
+            android:id="@+id/action_fragment4_to_fragment_information"
+            app:destination="@id/fragment_information" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_information"
+        android:name="com.example.techburg.InformationFragment"
+        tools:layout="@layout/fragment_information">
+        <action
+            android:id="@+id/action_fragment_information_to_fragment4"
+            app:destination="@id/fragment4" />
+        <action
+            android:id="@+id/action_fragment_information_to_fragment_change"
+            app:destination="@id/fragment_change" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_product"
+        android:name="com.example.techburg.ProductFragment"
+        tools:layout="@layout/fragment_product">
+        <argument
+            android:name="name"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragment_product_to_fragment1"
+            app:destination="@id/fragment1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_change"
+        android:name="com.example.techburg.ChangeFragment"
+        tools:layout="@layout/fragment_change">
+        <argument
+            android:name="account"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragment_change_to_fragment_information"
+            app:destination="@id/fragment_information" />
+    </fragment>
+
+</navigation>

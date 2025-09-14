@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_start">
+
+    <fragment
+        android:id="@+id/fragment_start"
+        android:name="com.example.techburg.StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_fragment_start_to_fragment_registration"
+            app:destination="@id/fragment_registration" />
+        <action
+            android:id="@+id/action_fragment_start_to_fragment_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_registration"
+        android:name="com.example.techburg.RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_fragment_registration_to_fragment_dialog"
+            app:destination="@id/fragment_dialog" />
+        <action
+            android:id="@+id/action_fragment_registration_to_fragment_login"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_fragment_registration_to_fragment_main"
+            app:destination="@id/fragment_main" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/fragment_dialog"
+        android:name="com.example.techburg.CustomDialog"
+        tools:layout="@layout/fragment_dialog">
+        <argument
+            android:name="text"
+            app:argType="string"/>
+    </dialog>
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.techburg.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_dialog"
+            app:destination="@id/fragment_dialog" />
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_registration"
+            app:destination="@id/fragment_registration" />
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_main"
+            app:destination="@id/fragment_main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.example.techburg.MainFragment"
+        tools:layout="@layout/fragment_main">
+    </fragment>
+
+</navigation>

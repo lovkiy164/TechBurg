@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="19dp"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textSize="36sp"
+        android:background="@color/white"
+        android:src="@mipmap/back"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@id/back"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Account information"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/text"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Email"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/email_text"
+        app:layout_constraintTop_toBottomOf="@id/email_text"
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0001FC"
+        android:text="email@gmail.com"/>
+
+    <TextView
+        android:paddingStart="230dp"
+        app:layout_constraintStart_toEndOf="@id/email_text"
+        app:layout_constraintTop_toTopOf="@id/email_text"
+        android:id="@+id/email_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:text="Change"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Password"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/password_text"
+        app:layout_constraintTop_toBottomOf="@id/password_text"
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0001FC"
+        android:text="******************"/>
+
+    <TextView
+        android:paddingStart="195dp"
+        app:layout_constraintStart_toEndOf="@id/password_text"
+        app:layout_constraintTop_toTopOf="@id/password_text"
+        android:id="@+id/password_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:text="Change"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/password"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:id="@+id/number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Phone number"/>
+
+    <TextView
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/number_text"
+        app:layout_constraintTop_toBottomOf="@id/number_text"
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0001FC"
+        android:text="+375 29 908 99 28"/>
+
+    <TextView
+        android:paddingStart="158dp"
+        app:layout_constraintStart_toEndOf="@id/number_text"
+        app:layout_constraintTop_toTopOf="@id/number_text"
+        android:id="@+id/number_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:text="Change"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
